@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}All Products{% endblock %}
+{% block loggedin %}{% endblock %}
+{% block content %}
+<center> <h1>All Products</h1></center>
+
+         <center><table border=2px cellspacing=4px>
+                   <tr>
+                        <th>Product Name</th>
+                       <th>Company Id</th> 
+                        <th>Product Description </th>
+                        <th>Product price</th>
+                        <th>product_price_currency </th>
+                        <th>product QRcode </th>
+                   </tr>
+                   
+            {% for pd in pro %}
+                   <tr>
+                        <th>{{pd.product_name}}</th>
+                       <th>{{pd.Company_id}} </th> 
+                        <th>{{pd.description }}</th>
+                        <th>{{pd.product_price}}</th>
+                        <th>{{pd.product_price_currency}}</th>
+                        <th>{{pd.qr_image}}</img></th>
+                        
+                   </tr> 
+            {% endfor %}
+                </table></center>
+{% endblock %}

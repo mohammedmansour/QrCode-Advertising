@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Add Product{% endblock %}
+{% block loggedin %}{% endblock %}
+{% block content %}
+<h1>{{companyData.company_name}}'s Profile</h1>
+
+<div>
+
+     <img src="{{companyData.company_photo}}"  height="250" width="250"> 
+    
+    <h3> Company Phone: {{companyData.phone}}</h3>
+    <h3> Company E-mail: {{companyData.email}}</h3>
+    <h3> Descriptip: {{companyData.description}}</h3>
+    <h3> Established Date: {{companyData.establishedDate}}</h3>
+    
+    <a href= > List Company'sProducts </a>
+    
+</div>
+{% endblock %}

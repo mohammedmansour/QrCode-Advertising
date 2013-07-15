@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}All Compaigns{% endblock %}
+{% block loggedin %}{% endblock %}
+{% block content %}
+<h1>All Compaigns </h1>
+
+         <table border=2px cellspacing=4px>
+                    <tr>
+                        <th>Compaign Name</th>
+                        <th>Product Id </th>
+                        <th>Company Id </th>
+                        <th>Compaign Description</th>
+                        <th>compaign month </th>
+                        <th>QR </th>
+                   </tr>
+            
+         
+                {% for pd in comp %} 
+                   <tr>
+                        <td>{{pd.compaign_name}}</td>
+                        <td>{{pd.product_id}}</td>
+                        <td>{{pd.company_id}}</td>
+                        <td>{{pd.description}}</td>
+                        <td>{{pd.compaign_month}}</td>
+                        <td><img src="../{{qr_image}}"></img></td>                        
+                   </tr> 
+                {% endfor %} 
+            </table>
+ {% endblock %}

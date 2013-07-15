@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Product Profile{% endblock %}
+{% block loggedin %}{% endblock %}
+{% block content %}
+<h1>Product Profile </h1>
+{{pro.product_name}}
+                 <!--   <th>{{pro.product_name}}</th>
+                        <th>{{pro.description }}</th>
+                        <th>{{pro.product_price}}</th>
+                        <th>{{pro.product_price_currency}}</th> -->
+         <table border=2px cellspacing=4px>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Product Description </th>
+                        <th>Product price</th>
+                        <th>product_price_currency </th>
+                        <th>U.R.L </th>
+                   </tr>
+            
+         
+                {% for pd in pro %} 
+                   <tr>
+                        <td>{{pd.product_name}}</td>
+                        <td>{{pd.description }}</td>
+                        <td>{{pd.product_price}}</td>
+                        <td>{{pd.product_price_currency}}</td>
+                        <td>{{pd.url}}</td>
+                        
+                   </tr> 
+                {% endfor %} 
+            </table>
+  {% endblock %}
+
+                

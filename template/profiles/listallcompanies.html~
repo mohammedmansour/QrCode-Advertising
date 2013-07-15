@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Add Product{% endblock %}
+{% block loggedin %}{% endblock %}
+{% block content %}
+<center> <h1>All Companies</h1></center>
+
+         <center><table border=2px cellspacing=4px>
+                    <tr>
+                        <th>Company Name</th>
+                        <th>Cpmany Phone </th>
+                        <th>Company Emailecho</th>
+                        <th>Descriptionecho </th>
+                        <th>Established Date</th>                        
+                        <th>U.R.L</th>
+                   </tr>
+            
+            {% for companyData in companyData %}
+                <tr>
+                        <th>{{companyData.company_name}}</th>
+                        <th>{{companyData.phone}}</th>
+                        <th>{{companyData.email}}</th>
+                        <th>{{companyData.description}}</th>
+                        <th>{{companyData.establishedDate}}</th>
+                        <th>{{companyData.url}}</th>
+                   </tr> 
+            {% endfor %}
+                </table></center>
+ {% endblock %}
